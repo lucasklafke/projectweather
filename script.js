@@ -19,9 +19,6 @@ function saveClimateInformation(weatherResponse) {
   printClimateInformation(local,temperature,climate);
 
   console.log(weatherResponse);
-//   console.log(weatherResponse.data.name);
-//   console.log(weatherResponse.data.main.temp);
-//   console.log(weatherResponse.data.weather[0].main);
 }
 
 function printClimateInformation(local,temperature,climate){
@@ -62,7 +59,8 @@ outputLon.innerHTML = sliderLon.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 sliderLon.oninput = function () {
-  outputLon.innerHTML = this.value;
+  lon = this.value
+  outputLon.innerHTML = lon;
 };
 
 const sliderLat = document.getElementById("myRangeLat");
@@ -70,5 +68,10 @@ const outputLat = document.getElementById("demoLat");
 outputLat.innerHTML = sliderLat.value; // Display the default slider value
 
 sliderLat.oninput = function () {
-    outputLat.innerHTML = this.value;
+  lat = this.value
+  outputLat.innerHTML = lat;
 };
+
+function searchLocalClimate(){
+    getLocalClimate();
+}
