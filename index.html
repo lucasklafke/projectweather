@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>document</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Tempo.com</header>
     <main>
+      <img class="main-background" src="images/wind.jpg" alt="" />
+      <h4>nome da cidade</h4>
+      <img src="" alt="" />
+    </main>
+
+    <div class="outromain">
       Clique no botão para receber sua localização em Latitude e Longitude:
       <p id="demo"></p>
       <button onclick="getLocation()">Clique Aqui</button>
@@ -35,42 +41,9 @@
         />
       </div>
       <p id="demoLat"></p>
-    </main>
+    </div>
 
-    <script>
-      var x = document.getElementById("demo");
-      function getLocation() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-          x.innerHTML = "O seu navegador não suporta Geolocalização.";
-        }
-      }
-      function showPosition(position) {
-        x.innerHTML =
-          "Latitude: " +
-          position.coords.latitude +
-          "<br>Longitude: " +
-          position.coords.longitude;
-      }
-
-      const sliderLon = document.getElementById("myRangeLon");
-      const outputLon = document.getElementById("demoLon");
-      outputLon.innerHTML = sliderLon.value; // Display the default slider value
-
-      // Update the current slider value (each time you drag the slider handle)
-      sliderLon.oninput = function () {
-        outputLon.innerHTML = this.value;
-      };
-
-      const sliderLat = document.getElementById("myRangeLat");
-      const outputLat = document.getElementById("demoLat");
-      outputLat.innerHTML = sliderLat.value; // Display the default slider value
-
-      // Update the current slider value (each time you drag the slider handle)
-      sliderLat.oninput = function () {
-        outputLat.innerHTML = this.value;
-      };
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
