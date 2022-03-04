@@ -79,6 +79,7 @@ main{
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 80%;
     height: calc(100vh - 150px);
 }
@@ -128,6 +129,17 @@ h4{
     height: 25px;
     background: #04aa6d;
     cursor: pointer;
+  }
+  .climate-information p,h4{
+      color: wheat;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+  }
+  .climate-information{
+      background-color: #29125f;
+      width: 200px;
+      height: 200px;
   }
 
 

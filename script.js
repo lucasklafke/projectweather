@@ -26,9 +26,9 @@ function saveClimateInformation(weatherResponse) {
 function printClimateInformation(local,icon,temperature,climate){
     divClimateInformation.innerHTML += `
         <h4>${local}</h4>
-        <img src="http://openweathermap.org/img/wn/${icon}@2x.png"/>
         <p>${temperature}</p>
         <p>${climate}</p>
+        <img src="http://openweathermap.org/img/wn/${icon}@2x.png"/>
     `;
 }
 
