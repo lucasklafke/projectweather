@@ -41,7 +41,15 @@ header{
 }
 .input-container{
     position: absolute;
-    left: calc(50% - 175px)
+    left: calc(50% - 175px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-container button{
+    width: 50px;
+    height: 20px;
 }
 #demo{
     text-align: center;
@@ -161,6 +169,6 @@ h4{
     main{
         width: 100%;
         height: calc(100vh - 300px);
-        margin-top: 300px;
+        margin-top: ;
     }
   }
