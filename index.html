@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>document</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -15,38 +15,43 @@
             <button class="get-loc" onclick="getLocation()">Clique Aqui</button>
         </div>
         <div class="input-container">
-            <input type="text" name="" id="" placeholder="Escreva Aqui">
-            <button class="get-header-input"> search </button>
+            <div class="outromain">
+                Arrasta para definir as coordenadas desejadas!
+                <p id="demo"></p>
+                <div class="slidecontainer lon">
+                  <input
+                    type="range"
+                    min="-90"
+                    max="90"
+                    value="0"
+                    class="slider"
+                    id="myRangeLon"
+                  />
+                </div>
+                <p id="demoLon"></p>
+                <div class="slidecontainer lat">
+                  <input
+                    type="range"
+                    min="-180"
+                    max="180"
+                    value="0"
+                    class="slider"
+                    id="myRangeLat"
+                  />
+                </div>
+                <p id="demoLat"></p>
+              </div>
         </div>
         <div></div>
     </header>
+
     <main>
-        <img class="main-background" src="images/wind.jpg" alt="">
-        <h4>nome da cidade</h4>
-        <img src="" alt="">
+      <img class="main-background" src="images/wind.jpg" alt="" />
+      <h4>nome da cidade</h4>
+      <img src="" alt="" />
     </main>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./script.js"></script>
-
-<script>
-var x=document.getElementById("demo");
-function getLocation()
-  {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    }
-  else{x.innerHTML="O seu navegador não suporta Geolocalização.";}
-  }
-function showPosition(position)
-  {
-  x.innerHTML="Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude; 
-  }
-</script> 
-
-
-    
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
